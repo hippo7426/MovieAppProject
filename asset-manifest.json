@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/SJflix/static/js/main.14fa393a.chunk.js",
+    "main.js.map": "/SJflix/static/js/main.14fa393a.chunk.js.map",
+    "runtime-main.js": "/SJflix/static/js/runtime-main.4f6ed750.js",
+    "runtime-main.js.map": "/SJflix/static/js/runtime-main.4f6ed750.js.map",
+    "static/js/2.738a5eb5.chunk.js": "/SJflix/static/js/2.738a5eb5.chunk.js",
+    "static/js/2.738a5eb5.chunk.js.map": "/SJflix/static/js/2.738a5eb5.chunk.js.map",
+    "index.html": "/SJflix/index.html",
+    "static/js/2.738a5eb5.chunk.js.LICENSE.txt": "/SJflix/static/js/2.738a5eb5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f6ed750.js",
+    "static/js/2.738a5eb5.chunk.js",
+    "static/js/main.14fa393a.chunk.js"
+  ]
+}
