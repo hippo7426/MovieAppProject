@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SJflix/static/css/main.4673627f.chunk.css",
-    "main.js": "/SJflix/static/js/main.048aa057.chunk.js",
-    "main.js.map": "/SJflix/static/js/main.048aa057.chunk.js.map",
+    "main.js": "/SJflix/static/js/main.e0cf4f76.chunk.js",
+    "main.js.map": "/SJflix/static/js/main.e0cf4f76.chunk.js.map",
     "runtime-main.js": "/SJflix/static/js/runtime-main.4f6ed750.js",
     "runtime-main.js.map": "/SJflix/static/js/runtime-main.4f6ed750.js.map",
     "static/js/2.a303ee5c.chunk.js": "/SJflix/static/js/2.a303ee5c.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.4f6ed750.js",
     "static/js/2.a303ee5c.chunk.js",
     "static/css/main.4673627f.chunk.css",
-    "static/js/main.048aa057.chunk.js"
+    "static/js/main.e0cf4f76.chunk.js"
   ]
 }
