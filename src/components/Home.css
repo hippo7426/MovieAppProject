@@ -1,0 +1,32 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.home_wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+.home_section {
+    margin-bottom : 10px;
+    background-color: rgb(255, 0, 0, 0.5);
+    width:100%;
+}
+
+.movies{
+    display:flex;
+    overflow-x:auto;
+}
+
+.movies_category{
+    background-color: white;
+    display:inline-block;
+    padding:10px;
+    margin:10px;
+}
+.movies_poster{
+    margin:10px;
+}
