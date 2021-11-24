@@ -1,2 +1,0 @@
-(this.webpackJsonpsjflix=this.webpackJsonpsjflix||[]).push([[0],{9:function(e,n,t){"use strict";t.r(n);t(1);var s=t(3),i=t.n(s),r=t(0);var c=function(){return Object(r.jsx)("div",{children:"Hello!!!! My name is SJ"})};i.a.render(Object(r.jsx)(c,{}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.e0556dfd.chunk.js.map
