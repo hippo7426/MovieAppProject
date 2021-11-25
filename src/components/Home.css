@@ -16,17 +16,17 @@
     width:100%;
 }
 
-.movies{
+.contents{
     display:flex;
     overflow-x:auto;
 }
 
-.movies_category{
+.contents_category{
     background-color: white;
     display:inline-block;
     padding:10px;
     margin:10px;
 }
-.movies_poster{
+.contents_poster{
     margin:10px;
 }
