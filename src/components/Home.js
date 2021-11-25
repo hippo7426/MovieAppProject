@@ -13,6 +13,7 @@ class Home extends React.Component {
     categoryTV = ["Popular", "On Air", "Top Rated"];
 
     getMovies = async () => {
+        console.log("getMovies!");
         const movies = [];
         const { data: {
             results: popular
@@ -28,10 +29,11 @@ class Home extends React.Component {
             results: top
         } } = await axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=2");
         movies.push(top);
-        this.setState({ contents : movies });
+        this.setState({ contents: movies });
     }
 
     getTVs = async () => {
+        console.log("getTVs!");
         const TVs = [];
         const { data: {
             results: popular
@@ -47,7 +49,7 @@ class Home extends React.Component {
             results: top
         } } = await axios.get("https://api.themoviedb.org/3/tv/top_rated?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=2");
         TVs.push(top);
-        this.setState({ contents : TVs });
+        this.setState({ contents: TVs });
     }
 
     componentDidMount() {
@@ -59,26 +61,24 @@ class Home extends React.Component {
     }
     render() {
         const field = this.props.field;
-        console.log(field);
         return (
             // 'children' props 를 사용하여 수정 가능
             <div className="home_wrapper">
                 {/* {    this.categoryMovie.map((title, index) => {
                             return <HomeSection key={title} category={title} contents={this.state.movies[index]} />
-                        }, this)} */} 
+                        }, this)} */}
                 {
-                 (() => {
-                    if (field === "movie") {
-                        return this.categoryMovie.map((title, index) => {
-                            console.log(index);
-                            return <HomeSection key={title} category={title} contents={this.state.contents[index]} />
-                        }, this);
-                    } else if (field === "TV") {
-                        return this.categoryTV.map((title, index) =>{
-                            return <HomeSection key={title} category={title} contents={this.state.contents[index]} />
-                        }, this);
-                        } 
-                })()
+                    (() => {
+                        if (field === "movie") {
+                            return this.categoryMovie.map((title, index) => {
+                                return <HomeSection key={title} category={title} contents={this.state.contents[index]} />
+                            }, this);
+                        } else if (field === "TV") {
+                            return this.categoryTV.map((title, index) => {
+                                return <HomeSection key={title} category={title} contents={this.state.contents[index]} />
+                            }, this);
+                        }
+                    })()
                 }
 
             </div>
