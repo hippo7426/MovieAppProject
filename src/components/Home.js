@@ -109,7 +109,7 @@ function HomeCategory(props) {
 }
 
 function HomeContents(props) {
-    console.log(props.contents);
+    //console.log(props.contents);
     return (<div className="contents">
         {props.contents && props.contents.map(content => {
             // return <img className="contents_poster" key={content.id} alt={content.title}

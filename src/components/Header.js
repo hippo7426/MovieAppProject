@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
@@ -7,12 +7,16 @@ function Header() {
         <span id="Logo">SJ</span>
         <nav>
             <ul className="header_links">
-                <li>
-                    <Link to="/">Movie</Link>
-                </li>
-                <li>
-                    <Link to="/TV">TV</Link>
-                </li>
+                <NavLink to="/"  >
+                    <li>
+                        Movie
+                    </li>
+                </NavLink>
+                <NavLink to="/TV">
+                    <li>
+                        TV
+                    </li>
+                </NavLink>
             </ul>
         </nav>
     </header>;
