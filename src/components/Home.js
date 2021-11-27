@@ -7,6 +7,7 @@ class Home extends React.Component {
         super(props);
         this.state = {
             contents: [],
+            fav:{},
         };
     }
     categoryMovie = ["Popular", "Upcoming", "Top Rated"];
@@ -22,14 +23,17 @@ class Home extends React.Component {
 
         const { data: {
             results: upComing
-        } } = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=2");
+        } } = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=1");
         movies.push(upComing);
 
         const { data: {
             results: top
-        } } = await axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=2");
+        } } = await axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=1");
         movies.push(top);
         this.setState({ contents: movies });
+
+        const { data: fav } = await axios.get("https://api.themoviedb.org/3/movie/313369?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US");
+        this.setState({fav});
     }
 
     getTVs = async () => {
@@ -50,6 +54,10 @@ class Home extends React.Component {
         } } = await axios.get("https://api.themoviedb.org/3/tv/top_rated?api_key=219db60224db73e0c3bf1948f3e9a86a&language=ko-KR&page=2");
         TVs.push(top);
         this.setState({ contents: TVs });
+
+        const {data: fav
+         } = await axios.get("https://api.themoviedb.org/3/tv/66732?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US");
+        this.setState({fav});
     }
 
     componentDidMount() {
@@ -64,9 +72,9 @@ class Home extends React.Component {
         return (
             // 'children' props 를 사용하여 수정 가능
             <div className="home_wrapper">
-                {/* {    this.categoryMovie.map((title, index) => {
-                            return <HomeSection key={title} category={title} contents={this.state.movies[index]} />
-                        }, this)} */}
+                <div className="fav" style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${this.state.fav.backdrop_path})`}}>
+                    <h1>Welcome!</h1>
+                </div>
                 {
                     (() => {
                         if (field === "movie") {
@@ -104,8 +112,11 @@ function HomeContents(props) {
     console.log(props.contents);
     return (<div className="contents">
         {props.contents && props.contents.map(content => {
-            return <img className="contents_poster" key={content.id} alt={content.title}
-                src={`https://image.tmdb.org/t/p/w500${content.poster_path}`} height="300px" />;
+            // return <img className="contents_poster" key={content.id} alt={content.title}
+            //     src={`https://image.tmdb.org/t/p/w500${content.poster_path}`} height="300px" />;
+            return <div className="contents_poster" key={content.id} 
+            style={{backgroundImage : `url(https://image.tmdb.org/t/p/w500${content.poster_path})`}}>
+            </div>;
         })}
     </div>);
 }
