@@ -1,7 +1,6 @@
 import Home from './components/Home';
+import Header from './components/Header';
 import {
-  //BrowserRouter,
-  Link,
   HashRouter,
   Routes,
   Route
@@ -10,8 +9,7 @@ import './App.css';
 
 function App() {
   return <HashRouter >
-    <Link to="/">Home </Link>
-    <Link to="/TV">TV</Link>
+    <Header/>
     <Routes>
       <Route path="/" element={< Home key="movie" field="movie" />} />
       <Route path="/TV" element={< Home key="TV" field="TV" />} />

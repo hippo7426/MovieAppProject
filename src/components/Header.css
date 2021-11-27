@@ -1,0 +1,30 @@
+.main_header{
+    display:flex;
+    align-items: center;
+    position: fixed;
+    padding-left:40px;
+    background-color: rgb(0,0,0,0.5);
+    width:100%;
+}
+.main_header .header_links{
+    display: flex;
+    list-style: none;
+    padding:0px;
+    margin-left:10px;
+ 
+}
+
+.main_header .header_links li{
+    margin:0px 20px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+#Logo{
+    color: rgb(211, 208, 38);
+    font-size:50px;
+    font-family: 'Concert One', cursive;
+}
