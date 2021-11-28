@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/SJflix/static/css/main.bf99cb35.chunk.css",
-    "main.js": "/SJflix/static/js/main.ae47bddb.chunk.js",
-    "main.js.map": "/SJflix/static/js/main.ae47bddb.chunk.js.map",
+    "main.js": "/SJflix/static/js/main.6ef69715.chunk.js",
+    "main.js.map": "/SJflix/static/js/main.6ef69715.chunk.js.map",
     "runtime-main.js": "/SJflix/static/js/runtime-main.4f6ed750.js",
     "runtime-main.js.map": "/SJflix/static/js/runtime-main.4f6ed750.js.map",
-    "static/js/2.be345fa3.chunk.js": "/SJflix/static/js/2.be345fa3.chunk.js",
-    "static/js/2.be345fa3.chunk.js.map": "/SJflix/static/js/2.be345fa3.chunk.js.map",
+    "static/js/2.5fd51d52.chunk.js": "/SJflix/static/js/2.5fd51d52.chunk.js",
+    "static/js/2.5fd51d52.chunk.js.map": "/SJflix/static/js/2.5fd51d52.chunk.js.map",
     "index.html": "/SJflix/index.html",
     "static/css/main.bf99cb35.chunk.css.map": "/SJflix/static/css/main.bf99cb35.chunk.css.map",
-    "static/js/2.be345fa3.chunk.js.LICENSE.txt": "/SJflix/static/js/2.be345fa3.chunk.js.LICENSE.txt"
+    "static/js/2.5fd51d52.chunk.js.LICENSE.txt": "/SJflix/static/js/2.5fd51d52.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4f6ed750.js",
-    "static/js/2.be345fa3.chunk.js",
+    "static/js/2.5fd51d52.chunk.js",
     "static/css/main.bf99cb35.chunk.css",
-    "static/js/main.ae47bddb.chunk.js"
+    "static/js/main.6ef69715.chunk.js"
   ]
 }
