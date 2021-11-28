@@ -17,7 +17,7 @@
     width:100%;
 }
 
-.home_section ::-webkit-scrollbar{
+/* .home_section ::-webkit-scrollbar{
     width:10px;
 }
 .home_section ::-webkit-scrollbar-thumb{
@@ -29,7 +29,7 @@
 .home_section ::-webkit-scrollbar-track{
     background: rgb(255,255,255,0.1);
     border-radius: 10px;
-}
+} */
 .contents{
     display:flex;
     overflow-x:auto;

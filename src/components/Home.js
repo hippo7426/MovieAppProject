@@ -1,13 +1,14 @@
 import React from 'react';
 import './Home.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             contents: [],
-            fav:{},
+            fav: {},
         };
     }
     categoryMovie = ["Popular", "Upcoming", "Top Rated"];
@@ -33,7 +34,7 @@ class Home extends React.Component {
         this.setState({ contents: movies });
 
         const { data: fav } = await axios.get("https://api.themoviedb.org/3/movie/313369?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US");
-        this.setState({fav});
+        this.setState({ fav });
     }
 
     getTVs = async () => {
@@ -55,9 +56,9 @@ class Home extends React.Component {
         TVs.push(top);
         this.setState({ contents: TVs });
 
-        const {data: fav
-         } = await axios.get("https://api.themoviedb.org/3/tv/66732?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US");
-        this.setState({fav});
+        const { data: fav
+        } = await axios.get("https://api.themoviedb.org/3/tv/66732?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US");
+        this.setState({ fav });
     }
 
     componentDidMount() {
@@ -72,18 +73,18 @@ class Home extends React.Component {
         return (
             // 'children' props 를 사용하여 수정 가능
             <div className="home_wrapper">
-                <div className="fav" style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${this.state.fav.backdrop_path})`}}>
+                <div className="fav" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${this.state.fav.backdrop_path})` }}>
                     <h1>Welcome!</h1>
                 </div>
                 {
                     (() => {
                         if (field === "movie") {
                             return this.categoryMovie.map((title, index) => {
-                                return <HomeSection key={title} category={title} contents={this.state.contents[index]} />
+                                return <HomeSection key={title} category={title} media="movie" contents={this.state.contents[index]} />
                             }, this);
                         } else if (field === "TV") {
                             return this.categoryTV.map((title, index) => {
-                                return <HomeSection key={title} category={title} contents={this.state.contents[index]} />
+                                return <HomeSection key={title} category={title} media="TV" contents={this.state.contents[index]} />
                             }, this);
                         }
                     })()
@@ -97,28 +98,36 @@ class Home extends React.Component {
 function HomeSection(props) {
     return (
         <div className="home_section">
-            <HomeCategory title={props.category} />
-            <HomeContents contents={props.contents} />
+            <div className="contents_category">{props.category ? props.category : "N/A"}</div>;
+            <HomeContents media={props.media} contents={props.contents} />
         </div>
 
     )
 }
 
-function HomeCategory(props) {
-    return <div className="contents_category">{props.title ? props.title : "N/A"}</div>;
-}
-
 function HomeContents(props) {
     //console.log(props.contents);
-    return (<div className="contents">
-        {props.contents && props.contents.map(content => {
-            // return <img className="contents_poster" key={content.id} alt={content.title}
-            //     src={`https://image.tmdb.org/t/p/w500${content.poster_path}`} height="300px" />;
-            return <div className="contents_poster" key={content.id} 
-            style={{backgroundImage : `url(https://image.tmdb.org/t/p/w500${content.poster_path})`}}>
-            </div>;
-        })}
-    </div>);
+    return (
+        <div className="contents">
+            {props.contents && props.contents.map(content => {
+                // return <img className="contents_poster" key={content.id} alt={content.title}
+                //     src={`https://image.tmdb.org/t/p/w500${content.poster_path}`} height="300px" />;
+                return <Link key={content.id} to={
+                    (() => {
+                        if (props.media === "movie") {
+                            return `/movie/${content.id}`;
+                        } else if (props.media === "TV") {
+                            return `/TV/${content.id}`;
+                        }
+                    })()
+                } >
+                    <div className="contents_poster" 
+                        style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${content.poster_path})` }}>
+                    </div>
+                </Link>;
+            })}
+        </div>
+    );
 }
 
 

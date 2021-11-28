@@ -1,0 +1,57 @@
+
+.detail_wrapper{
+    padding:20px 40px;
+}
+
+.info_wrapper{
+    position: relative;
+}
+.info_back{
+    height:500px;
+    background-size:cover;
+    background-position: top center;
+    opacity: 0.3;
+    filter:blur(2px);
+}
+
+.info {
+    display:flex;
+    align-items: center;
+    position :absolute;
+    top:0px;
+    width:100%;
+    height:500px; 
+}
+.info_main{
+    flex:1;
+    height:100%;
+    margin:10px;
+    margin-right:25px;
+    color:white;
+    overflow-x :hidden;
+    overflow-y : auto;
+    position: relative;
+}
+
+.info_main *{
+    margin:10px;
+}
+
+.info_poster{
+   height:90%;
+   width:20%;
+   min-width: 250px;
+   margin:10px;
+   background-position: center center;
+   background-size: cover;
+}
+
+.info_overview{
+    min-height: 180px;
+}
+.trailer{
+    width:100%;
+    height:200px;
+    display:flex;
+    overflow-x:auto;
+}
