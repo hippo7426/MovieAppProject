@@ -34,6 +34,11 @@ function Header() {
                         TV
                     </li>
                 </NavLink>
+                <NavLink to="/Search">
+                    <li>
+                        Search
+                    </li>
+                </NavLink>
             </ul>
         </nav>
     </header>;

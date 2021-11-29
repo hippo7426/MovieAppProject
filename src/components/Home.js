@@ -15,7 +15,7 @@ class Home extends React.Component {
     categoryTV = ["Popular", "On Air", "Top Rated"];
 
     getMovies = async () => {
-        console.log("getMovies!");
+        //console.log("getMovies!");
         const movies = [];
         const { data: {
             results: popular
@@ -38,7 +38,7 @@ class Home extends React.Component {
     }
 
     getTVs = async () => {
-        console.log("getTVs!");
+        //console.log("getTVs!");
         const TVs = [];
         const { data: {
             results: popular
@@ -73,7 +73,8 @@ class Home extends React.Component {
         return (
             // 'children' props 를 사용하여 수정 가능
             <div className="home_wrapper">
-                <div className="fav" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${this.state.fav.backdrop_path})` }}>
+                <div className="fav" style={this.state.fav.backdrop_path ?
+                    { backgroundImage: `url(https://image.tmdb.org/t/p/original/${this.state.fav.backdrop_path})` }:null}>
                     <h1>Welcome!</h1>
                 </div>
                 {

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './Detail.css';
 
 function Detail({media}) {
@@ -142,35 +142,25 @@ function TVInfo(props) {
         </div> : null
 }
 
-function Cast() {
-
-}
-
 function Trailer({ trailer }) {
-
+    
     return (trailer ?
-
         <div className="trailer">{
             trailer.map((video) => {
                 return <iframe key={video.key} title={video.name} allowFullScreen
-                    src={`https://www.youtube.com/embed/${video.key}`}></iframe>
+                src={`https://www.youtube.com/embed/${video.key}`}></iframe>
             })
         }
-
         </div> : null
     );
 }
 
-function Recommend() {
+//function Cast() {}
 
-}
+// function Recommend() {}
 
-function Review() {
+// function Review() {}
 
-}
-
-function Seasons() {
-
-}
+// function Seasons() {}
 
 export default Detail;
