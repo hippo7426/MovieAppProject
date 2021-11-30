@@ -22,6 +22,7 @@ function Search() {
     // console.log(title);
     return <div className="search_wrapper">
         <div className="input_wrapper">
+            <h1>Test</h1>
             <input
                 placeholder="제목을 입력하세요 (Enter)"
                 value={(searchParams.get("title") || "")}
