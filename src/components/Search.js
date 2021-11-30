@@ -9,7 +9,7 @@ export default function Search() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log(params.title);
+        //console.log(params.title);
         if (params.title)
             setValue(params.title);
         else
