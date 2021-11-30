@@ -12,10 +12,13 @@ function Search() {
     let [title, setTitle] = useState(searchParams.get("title"));
     let [main, setMain] = useState(true);
 
+    console.log(searchParams.get("title"));
+    console.log(title);
     if (searchParams.get("title") === null) {
         if (!main) {
             setMain(true);
             setTitle(null);
+            console.log("default!");
         }
     }
 
@@ -65,8 +68,8 @@ class SearchResult extends React.Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        // console.log(nextProps.title);
-        // console.log(this.props.title);
+        console.log(nextProps.title);
+        console.log(this.props.title);
         // console.log(nextState.movie.total_result);
         // console.log(this.state.movie.total_results);
 
@@ -143,8 +146,8 @@ function MovieResult(props) {
 }
 
 function TVResult(props) {
-    console.log("tv!");
-    console.log(props.tv);
+    //console.log("tv!");
+    //console.log(props.tv);
     return (
         <div className="home_section">
             <div className="contents_category">{
