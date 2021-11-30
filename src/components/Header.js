@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link, useLocation, useResolvedPath } from 'react-router-dom';
+import { Link, useLocation, useResolvedPath } from 'react-router-dom';
 import './Header.css';
 
 function MyLink({ to, active, children}) {
@@ -29,16 +29,16 @@ function Header() {
                         Movie
                     </li>
                 </MyLink>
-                <NavLink to="/TV">
+                <MyLink to="/TV/" active="/TV">
                     <li>
                         TV
                     </li>
-                </NavLink>
-                <NavLink to="/Search">
+                </MyLink>
+                <MyLink to="/Search/" active="/Search">
                     <li>
                         Search
                     </li>
-                </NavLink>
+                </MyLink>
             </ul>
         </nav>
     </header>;

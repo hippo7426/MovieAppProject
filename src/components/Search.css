@@ -1,0 +1,18 @@
+.search_wrapper{
+    width:100%;
+    padding:40px;
+}
+
+#search_input{
+    width:100%;
+    height:40px;
+    background-color:rgb(77, 77, 77);
+    color:white;
+    border:none;
+    padding-left: 10px;
+    font-size:20px;
+}
+
+#search_input::placeholder{
+    color:rgb(170, 170, 170);
+}
