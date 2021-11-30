@@ -1,11 +1,29 @@
-import React from 'react';
-import {Outlet} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Outlet, useParams } from 'react-router-dom';
 import './Search.css';
 
 
-export default function Search(){
+export default function Search() {
+    const [value, setValue] = useState("");
+    const params = useParams();
+
+    useEffect(() => {
+        console.log(params.title);
+        if (params.title)
+            setValue(params.title);
+        else
+            setValue("");
+    }, [params]);
+
+
+
     return <div>
-        <h1 style={{color:'white'}}>main</h1>
-        <Outlet/>;
+        <div className="input_wrapper">
+            <input key={value}
+                defaultValue={value}
+            ></input>
         </div>
+        <Outlet />;
+    </div>
 }
+
