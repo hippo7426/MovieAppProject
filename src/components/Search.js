@@ -27,7 +27,7 @@ export default function Search() {
                 }}
             />
         </div>
-        <Outlet />;
+        <Outlet />
     </div>
 }
 
