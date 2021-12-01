@@ -17,11 +17,11 @@ export default function SearchResult() {
             const { data: {
                 results: movie
             } } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US&query=${params.title}&page=1&include_adult=false`);
-            console.log(movie);
+            // console.log(movie);
             const { data: {
                 results: tv
             } } = await axios.get(`https://api.themoviedb.org/3/search/tv?api_key=219db60224db73e0c3bf1948f3e9a86a&language=en-US&query=${params.title}&page=1&include_adult=false`);
-            console.log(tv);
+            // console.log(tv);
             setData({ tv, movie });
         }
         searchData();

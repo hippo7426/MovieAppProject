@@ -116,7 +116,7 @@ function MovieInfo(props) {
 
 function TVInfo(props) {
     const data = props.data;
-    console.log(props.data);
+    // console.log(props.data);
     const trailer = props.trailer;
     return props.data ?
         <div className="info_wrapper">

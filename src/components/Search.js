@@ -16,8 +16,6 @@ export default function Search() {
             setValue("");
     }, [params]);
 
-
-
     return <div className="search_wrapper">
         <div className="input_wrapper">
             <input id="search_input" key={value}
