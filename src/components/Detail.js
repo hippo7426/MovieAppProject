@@ -7,11 +7,11 @@ function Detail({media}) {
     let params = useParams();
 
     if (media === "movie"){
-        console.log(media);
+        //console.log(media);
         return <MovieDetail key={params.movieId} id={params.movieId} />;
     }
     else if(media==="TV"){
-        console.log(media);
+        //console.log(media);
         return <TVDetail key={params.tvId} id={params.tvId}/>;
     }
 }
@@ -116,6 +116,7 @@ function MovieInfo(props) {
 
 function TVInfo(props) {
     const data = props.data;
+    console.log(props.data);
     const trailer = props.trailer;
     return props.data ?
         <div className="info_wrapper">
