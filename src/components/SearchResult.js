@@ -60,7 +60,7 @@ export default function SearchResult() {
 
 
     return <div>
-        <h1 style={{ color: 'white' }}>{params.title}</h1>
+        <h1 id="searchTitle" >{params.title}</h1>
         <MovieResult movie={data.movie} />
         <TVResult tv={data.tv} />
     </div>

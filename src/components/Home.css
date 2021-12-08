@@ -85,6 +85,10 @@
     .home_section{
         margin-bottom: 10px;
     }
+    
+    .home_wrapper{
+        padding-top:0px;
+    }
 }
 
 @media screen and (max-width:320px){
@@ -95,4 +99,5 @@
     .fav h1{
         font-size: 1.3em;
     }
+
 }

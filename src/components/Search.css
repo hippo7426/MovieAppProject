@@ -16,3 +16,22 @@
 #search_input::placeholder{
     color:rgb(170, 170, 170);
 }
+
+#searchTitle{
+    color:white;
+}
+
+@media screen and (max-width:425px){
+    .search_wrapper{
+        padding:10px 40px;
+    }
+
+    #search_input{
+        height:30px;
+        font-size:15px;
+    }
+
+    #searchTitle{
+        font-size:1.5em;
+    }
+}

@@ -22,7 +22,7 @@ function MyLink({ to, active, children}) {
 function Header() {
     return <header className="main_header">
         <div id="Logo">SJ</div>
-        <nav>
+        <nav className="header_nav">
             <ul className="header_links">
                 <MyLink to="/" active="/movie" >
                     <li>
