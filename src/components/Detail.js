@@ -98,7 +98,7 @@ function MovieInfo(props) {
             <div className="info">
                 <div className="info_main">             
                         <h1>{data.title}</h1>
-                        <p>🌟{data.vote_average}<span> ⚬ </span>{data.release_date}<span> ⚬ </span> {data.runtime} min  <span> ⚬ </span>
+                        <p className="stat">🌟{data.vote_average}<span> ⚬ </span>{data.release_date}<span> ⚬ </span> {data.runtime} min  <span> ⚬ </span>
                             {(data.genres.map((genre) => {
                                 return genre.name
                             })).join(' / ')}
@@ -127,7 +127,7 @@ function TVInfo(props) {
             <div className="info">
                 <div className="info_main">             
                         <h1>{data.name}</h1>
-                        <p>🌟{data.vote_average}<span> ⚬ </span>{data.first_air_date}<span> ⚬ </span> {data.episode_run_time[0]} min  <span> ⚬ </span>
+                        <p className="stat">🌟{data.vote_average}<span> ⚬ </span>{data.first_air_date}<span> ⚬ </span> {data.episode_run_time[0]} min  <span> ⚬ </span>
                             {(data.genres.map((genre) => {
                                 return genre.name
                             })).join(' / ')}

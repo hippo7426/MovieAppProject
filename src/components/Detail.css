@@ -56,3 +56,64 @@
     display:flex;
     overflow-x:auto;
 }
+
+@media screen and (max-width:768px){
+    .info_main{
+        -ms-overflow-style: none;       /* IE, Edge */
+        scrollbar-width: none;          /* Firefox */
+
+        margin-right:10px;
+    }
+
+    .info_main::-webkit-scrollbar{
+        display: none;
+    }
+
+    .info_back{
+        opacity: 0;
+        z-index: -2;
+    }
+
+    .detail_wrapper{
+        padding:10px 10px;
+    }
+    .info_poster{
+        position: fixed;
+        left:-10px;
+        width:100%;
+        height:100%;
+        z-index:-1;
+        opacity: 0.3;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width:425px){
+    .info_poster{
+        top:40px;
+        height:calc(100% - 40px);
+        margin:0px;
+        left:0px;
+    }
+    .info_main{
+        margin:0px;
+    }
+    
+    .info_main h1{
+        font-size:1.5em;
+    }
+
+    .stat{
+        font-size:15px;
+    }
+
+    .info_overview{
+        font-size:13px;
+    }
+
+    .trailer{
+        margin-left:0px;
+    }
+
+}
